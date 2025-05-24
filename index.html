@@ -7,10 +7,9 @@
     <style>
         @font-face {
             font-family: 'Iciel Brittany Signature Regular';
-            /* Ưu tiên WOFF2 và WOFF nếu có */
-            src: url('fonts/IcielBrittanySignature-Regular.woff2') format('woff2'), /* Nếu cậu có file .woff2 với tên này */
-                 url('fonts/IcielBrittanySignature-Regular.woff') format('woff'),   /* Nếu cậu có file .woff với tên này */
-                 url('fonts/iCielBrittanySignature-Regular.ttf') format('truetype'); /* Tên file .ttf của cậu */
+            src: url('fonts/IcielBrittanySignature-Regular.woff2') format('woff2'),
+                 url('fonts/IcielBrittanySignature-Regular.woff') format('woff'),
+                 url('fonts/iCielBrittanySignature-Regular.ttf') format('truetype');
             font-weight: normal;
             font-style: normal;
         }
@@ -41,7 +40,8 @@
         }
 
         .container {
-            background-color: #E4B1F0;
+            /* THAY ĐỔI Ở ĐÂY: Làm trong suốt nền */
+            background-color: rgba(228, 177, 240, 0.85); /* Màu #E4B1F0 với độ trong suốt 85% */
             padding: 20px;
             border-radius: 15px;
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
@@ -84,7 +84,7 @@
         }
 
         .dear-text {
-            font-family: 'Iciel Brittany Signature Regular', cursive; /* Áp dụng font */
+            font-family: 'Iciel Brittany Signature Regular', cursive;
             font-size: 1.8em;
             font-weight: normal;
             margin-bottom: 8px;
@@ -114,7 +114,8 @@
         .signature-image {
             width: 150px;
             height: auto;
-            background-color: #E4B1F0;
+            /* Nền của ảnh chữ ký giờ sẽ là nền của container (trong suốt) nếu ảnh chữ ký có nền trong suốt */
+            /* background-color: rgba(228, 177, 240, 0.85); */ /* Bỏ đi hoặc để trùng màu với container */
             display: block;
             margin-left: auto;
             margin-right: auto;
@@ -131,6 +132,7 @@
                 padding: 15px;
                 margin-top: 15px;
                 margin-bottom: 15px;
+                background-color: rgba(228, 177, 240, 0.9); /* Có thể tăng độ mờ cho mobile nếu cần */
             }
             .image-frame {
                 font-size: 0.8em;
@@ -157,7 +159,7 @@
 <body>
 
     <video autoplay loop muted playsinline id="video-background">
-        <source src="https://v1.pinimg.com/videos/mc/720p/e7/4b/1f/e74b1faad577bb719ee044b5b4f02f25.mp4" type="video/mp4">
+        <source src="https://github.com/Pewdeadcake/nq.han/raw/refs/heads/main/vid.mp4" type="video/mp4">
         Trình duyệt của bạn không hỗ trợ thẻ video.
     </video>
 

@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lưu bút gửi Hân Kumori</title>
+    <style>
+        @font-face {
+            font-family: 'Iciel Brittany Signature Regular';
+            /* Ưu tiên WOFF2 và WOFF nếu có */
+            src: url('fonts/IcielBrittanySignature-Regular.woff2') format('woff2'), /* Nếu cậu có file .woff2 với tên này */
+                 url('fonts/IcielBrittanySignature-Regular.woff') format('woff'),   /* Nếu cậu có file .woff với tên này */
+                 url('fonts/iCielBrittanySignature-Regular.ttf') format('truetype'); /* Tên file .ttf của cậu */
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        body {
+            margin: 0;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        #video-background {
+            position: fixed;
+            right: 0;
+            bottom: 0;
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            z-index: -1000;
+            object-fit: cover;
+            filter: brightness(0.7) blur(5px);
+        }
+
+        .container {
+            background-color: #E4B1F0;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            max-width: 600px;
+            width: 100%;
+            text-align: left;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .image-frames {
+            display: flex;
+            justify-content: space-around;
+            align-items: flex-start;
+            margin-bottom: 25px;
+        }
+
+        .image-frame {
+            width: 45%;
+            aspect-ratio: 1 / 1;
+            background-color: #f0f0f0;
+            border-radius: 15px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            font-size: 0.9em;
+            color: #555;
+            overflow: hidden;
+            border: 2px solid #ddd;
+        }
+
+        .image-frame img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 13px;
+        }
+
+        .dear-text {
+            font-family: 'Iciel Brittany Signature Regular', cursive; /* Áp dụng font */
+            font-size: 1.8em;
+            font-weight: normal;
+            margin-bottom: 8px;
+            color: #5c3a96;
+        }
+
+        .message-content {
+            font-size: 1em;
+            line-height: 1.6;
+            margin-bottom: 25px;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+        }
+
+        .signature-section {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .signature-description {
+            font-size: 0.9em;
+            font-style: italic;
+            color: #444;
+            margin-bottom: 10px;
+        }
+
+        .signature-image {
+            width: 150px;
+            height: auto;
+            background-color: #E4B1F0;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 8px;
+        }
+
+        .signature-name {
+            font-size: 1em;
+            font-weight: bold;
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 15px;
+                margin-top: 15px;
+                margin-bottom: 15px;
+            }
+            .image-frame {
+                font-size: 0.8em;
+            }
+            .dear-text {
+                font-size: 1.5em;
+                margin-bottom: 6px;
+            }
+            .message-content {
+                font-size: 0.95em;
+            }
+            .signature-image {
+                width: 120px;
+            }
+            #video-background {
+                filter: brightness(0.6) blur(3px);
+            }
+            .signature-section {
+                margin-top: 25px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <video autoplay loop muted playsinline id="video-background">
+        <source src="https://v1.pinimg.com/videos/mc/720p/e7/4b/1f/e74b1faad577bb719ee044b5b4f02f25.mp4" type="video/mp4">
+        Trình duyệt của bạn không hỗ trợ thẻ video.
+    </video>
+
+    <div class="container">
+        <div class="image-frames">
+            <div class="image-frame">
+                <img src="IMG_20241103_235737.jpg" alt="Ảnh kỷ niệm">
+            </div>
+            <div class="image-frame">
+                chờ ảnh 26/5 hihi
+            </div>
+        </div>
+
+        <div class="dear-text" id="dearName">
+            dear Hân Kumori,
+        </div>
+
+        <div class="message-content" id="messageContent">Oh wow 3 năm r cơ à...
+Hihi t viết trên áo ch đủ nên là h viết thêm nè.
+Ý là lúc mới vào l10 ý quả tnhien th hà chỉ t với m xong t kiểu ôi vcl kiểu này c3 khó nch (hihi ldo nghĩ v kbt tsao). Nma kiểu sau dần cũng thấy m friendly thân thiện đồ (hiền thì đéo dmm toàn chửi t).
+Xong m còn kiểu vào cùng clb với t xong dm còn abcdxyz (ê t dbt mô tả nnao nên viết nthe =))) )
+Uh xong nhiều lúc t thấy t nch kiểu xàm chó vcloz xong cứ tdn ý mà m vẫn nghe t?? Ê á ý là k nghĩ có đứa sẵn sàng nghe t mấy lúc nthe mà vẫn bth luôn nha m.
+Xong ý mấy lần buổi đêm t cứ sợ ma tiktok (uh đừng kể ai t sợ ma 🤗) mà dm t nhắn quả giờ vcloz xong còn xàm chó mà m vẫn nhắn để tbm đỡ =))) dc cơ. Dm xong còn mấy lúc t hỏi m mấy chuyện tcam ncc ý xong m, uh chính m là người nói cái t cần nghe chứ kph t muốn nghe. Chính m là người chửi t vcloz để t nhận ra t bị ... (uh chửi đúng vl đ cãi dc). NOI CHUNG LA m lúc đ nào cũng nghe t nói chuyện dc mà chuyện clg m cũng nghe t á, mdu t biết m có cả vde của riêng m nữa nma m vẫn sẵn sàng nghe t xà lơ đủ kiểu. Kiểu m là đứa t đủ tin tưởng để có thể kể những chuyện mà t k nghĩ t sẽ kể ai luôn ý, m tạo cho t cảm giác an toàn vcll. Tnhien nghĩ sau này k còn chung lớp với má nữa t cũng buồn á má, v nên là dù gì thì cũng đừng end tình bạn này nhs (sau bố còn mượn tiền đi làm nail 💅). Hihi thra t muốn nói nữa nma t bị mất gốc tviet =)))), v nen la du co nhu nao cung dung ket thuc cai tinh chi em bo cap nay nhs =))). À VỚI CẢ M PHẢI ĐỖ NEU CHO T NHỚ CHƯA. DCU M Đ ĐỖ LÀ TRỪ 1 TÌNH BẠN DMMMM. hihi chắc v thoi, à btw du m co nhu nao thi t cung luon san sang nghe m ke nhung van de cua m nhs, co qua co lai moi toai long nhau ma xd. T ghét (quý) m nhiều hơn hqua và ít hơn hôm nay. GHÉT VCL
+        </div>
+
+        <div class="signature-section">
+            <div class="signature-description">
+                Người làm phiền m cả 3 năm c3
+            </div>
+            <img src="image_0cc929.png" alt="Chữ ký Khôi" class="signature-image">
+            <div class="signature-name">
+                Nguyễn Cảnh Khôi
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // JavaScript functions (nếu cần)
+    </script>
+
+</body>
+</html>
